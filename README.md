@@ -1,0 +1,1 @@
+# php-sent-headers-echo
