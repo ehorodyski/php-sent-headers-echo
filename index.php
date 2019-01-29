@@ -34,32 +34,36 @@
 <body>
   <h1>Request Headers</h1>
   <table>
-    <tr>
       <thead>
-        <td>Header</td>
-        <td>Value</td>
+        <tr>
+          <td>Header</td>
+          <td>Value</td>
+        </tr>
       </thead>
-    </tr>
-  <?php
-    $headers = apache_request_headers();
-    foreach ($headers as $header => $value) {
-      echo "<tr><td><pre>$header</pre></td><td><pre>$value</pre></td></tr>";
-    }
-  ?>
+      <tbody>
+        <?php
+          $headers = apache_request_headers();
+          foreach ($headers as $header => $value) {
+            echo "<tr><td><pre>$header</pre></td><td><pre>$value</pre></td></tr>";
+          }
+        ?>
+  </tbody>
   </table>
   <h1>Request Cookies</h1>
   <table>
-    <tr>
-      <thead>
+    <thead>
+      <tr>
         <td>Name</td>
         <td>Value</td>
-      </thead>
-    </tr>
-  <?php
-    foreach ($_COOKIE as $name => $value) {
-      echo "<tr><td><pre>$name</pre></td><td><pre>$value</pre></td></tr>";
-    }
-  ?>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        foreach ($_COOKIE as $name => $value) {
+          echo "<tr><td><pre>$name</pre></td><td><pre>$value</pre></td></tr>";
+        }
+      ?>
+    </tbody>
   </table>
 </body>
 </html>
