@@ -36,8 +36,8 @@
   <table>
       <thead>
         <tr>
-          <td>Header</td>
-          <td>Value</td>
+          <th>Header</th>
+          <th>Value</th>
         </tr>
       </thead>
       <tbody>
@@ -53,8 +53,8 @@
   <table>
     <thead>
       <tr>
-        <td>Name</td>
-        <td>Value</td>
+        <th>Name</th>
+        <th>Value</th>
       </tr>
     </thead>
     <tbody>
