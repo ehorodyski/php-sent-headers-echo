@@ -19,20 +19,13 @@
         <td>Value</td>
       </thead>
     </tr>
-
-  </table>
-
-
   <?php
-
-  $headers = apache_request_headers();
-  foreach ($headers as $header => $value) {
-  echo "<pre>";
-  echo "$header : $value";
-  echo "</pre>";
-  }
-
+    $headers = apache_request_headers();
+    foreach ($headers as $header => $value) {
+      echo "<tr><td><pre>$header</pre></td><td><pre>$value</pre></td></tr>";
+    }
   ?>
+  </table>
 </body>
 </html>
 
