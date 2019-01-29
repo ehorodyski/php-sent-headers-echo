@@ -6,8 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PHP: Sent Headers/Cookies Echo</title>
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; }
-    thead { font-weight: 800; }
+    h1 {
+      font: normal 24px Arial, sans-serif;
+    }
+    table {
+        border: solid 1px #DDEEEE;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font: normal 13px Arial, sans-serif;
+    }
+    table thead th {
+        background-color: #DDEFEF;
+        border: solid 1px #DDEEEE;
+        color: #336B6B;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    table tbody td {
+        border: solid 1px #DDEEEE;
+        color: #333;
+        padding: 10px;
+        text-shadow: 1px 1px 1px #fff;
+    }
   </style>
 </head>
 <body>
@@ -23,6 +44,20 @@
     $headers = apache_request_headers();
     foreach ($headers as $header => $value) {
       echo "<tr><td><pre>$header</pre></td><td><pre>$value</pre></td></tr>";
+    }
+  ?>
+  </table>
+  <h1>Request Cookies</h1>
+  <table>
+    <tr>
+      <thead>
+        <td>Name</td>
+        <td>Value</td>
+      </thead>
+    </tr>
+  <?php
+    foreach ($_COOKIE as $name => $value) {
+      echo "<tr><td><pre>$name</pre></td><td><pre>$value</pre></td></tr>";
     }
   ?>
   </table>
